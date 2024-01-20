@@ -34,3 +34,26 @@ function slider(){
   })
 }
 slider();
+
+function cartUpdate(){
+  const carts = document.querySelectorAll(".add-to-cart");
+  
+  carts.forEach((cart)=>{
+    cart.addEventListener("click", ()=>{
+      if(!(cart.innerHTML === "Cart Added" || cart.innerHTML === "Checkout")){
+        cart.innerHTML = "Adding <span class='cart-adding'></span>";
+      setTimeout(function(){
+        cart.innerHTML = "Cart Added";
+      },2000);
+      }else if(cart.innerHTML === "Cart Added"){
+        alert("The Product is already added to cart, Please go to Checkout");
+        cart.innerHTML = "Checkout";
+      }
+      if(cart.innerHTML === "Checkout"){
+        console.log("check");
+      }
+
+    });
+  });
+}
+cartUpdate();
