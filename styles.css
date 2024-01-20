@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+:root{
+    --Ubuntu:'Ubuntu', sans-serif
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.main-container{
+    min-height: 500px;
+    max-width: 1250px;
+    background-color: beige;
+    margin: auto;
+    position: relative;
+}
+.heading-para{
+    padding: 20px 0;
+}
+.popular-h, .popular-p{
+    text-align: center;
+    color: rgb(22, 21, 20);
+    font-family: var(--Ubuntu);
+}
+.popular-h{
+    font-weight: 500;
+}
+.popular-p{
+    font-weight: 400;
+}
+.cards-container{
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 15px;
+    scroll-snap-type: x proximity;
+    overflow-x: hidden;
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 300px;
+    max-width: 400px;
+    margin: 10px 15px;
+    background-color: aquamarine;
+    padding: 25px;
+    border-radius: 10px;
+    font-family: var(--Ubuntu);
+    scroll-snap-align:center;
+    scroll-behavior: smooth;
+    transition: all 400ms ease-in;
+}
+.go-left{
+    transform: translateX(-100px);
+}
+.cards .p-image{
+    width: 240px;
+    height: 250px;
+    border-radius: 8px;
+    user-select: none;
+}
+.cards .p-price{
+    padding: 5px 0;
+}
+.cards .add-to-cart{
+    padding: 10px 18px;
+    background-color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 350ms ease-in;
+    user-select: none;
+}
+.cards .add-to-cart:hover{
+    background-color: tomato;
+}
+
+.left-arrow,.right-arrow{
+    position: absolute;
+    top: 50%;
+    font-size: 35px;
+    cursor: pointer;
+    color: #FF2E63;
+}
+span > i {
+    background-color: #fff;
+    border-radius: 50%;
+}
+.right-arrow{
+    right: 10px;
+    z-index: 9;
+}
+.left-arrow{
+    left: 10px;
+    z-index: 9;
+}
+
